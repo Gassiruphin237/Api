@@ -14,10 +14,10 @@ class CreatePokemonsTable extends Migration
     public function up()
     {
         Schema::create('pokemons', function (Blueprint $table) {
-            $table->string("id",70)->default(uniqid('gfg'));
+            $table->id();
             $table->string("name", 30)->nullable();
             $table->string("weigth", 30)->nullable();
-            $table->string("image", 100)->nullable();
+            $table->string("image", 100)->nullable()->unique();
             $table->string("description", 250)->nullable();
             $table->timestamps();
             $table->engine = "InnoDB";

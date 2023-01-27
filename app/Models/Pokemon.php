@@ -16,4 +16,5 @@ class Pokemon extends Model
         'description'
 
     ];
+    protected $table = "pokemons";
 }

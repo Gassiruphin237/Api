@@ -20,4 +20,5 @@ use App\Http\Controllers\PokemonController;
 Route::group(['middleware'=>'api'],function($routes){
 
     Route::get('/Pokemons',[PokemonController::class, 'getPokemon']);
+    Route::post('/AddPokemon',[PokemonController::class, 'addPokemon']);
 });
